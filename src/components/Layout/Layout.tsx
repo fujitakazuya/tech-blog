@@ -8,10 +8,10 @@ type Props = {
 }
 
 export const Layout: FC<Props> = ({ title = 'TECH BLOG', children }) => (
-  <div className={styles.container}>
+  <>
     <Head>
       <title>{title}</title>
     </Head>
-    {children}
-  </div>
+    <div className={styles.container}>{children}</div>
+  </>
 )

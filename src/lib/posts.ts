@@ -7,7 +7,7 @@ import html from 'remark-html'
 export type PostData = {
   id: string
   title: string
-  date: string
+  published: string
 }
 
 export type PostContentData = PostData & {
@@ -29,12 +29,12 @@ export const getSortedPostsData = (): PostData[] => {
 
       return {
         id,
-        ...(matterResult.data as { date: string; title: string }),
+        ...(matterResult.data as { published: string; title: string }),
       }
     }
   )
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
+  return allPostsData.sort((a, b) => (a.published < b.published ? 1 : -1))
 }
 
 export const getAllPostIds = (): { params: { id: string } }[] => {
@@ -59,6 +59,6 @@ export const fetchPostData = async (id: string): Promise<PostContentData> => {
   return {
     id,
     contentHTML,
-    ...(matterResult.data as { date: string; title: string }),
+    ...(matterResult.data as { published: string; title: string }),
   }
 }

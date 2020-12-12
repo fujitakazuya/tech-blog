@@ -1,4 +1,6 @@
+/* eslint jsx-a11y/anchor-is-valid: 0 */
 import { GetStaticProps } from 'next'
+import Link from 'next/link'
 import { Layout } from '../components/Layout/Layout'
 import { getSortedPostsData, PostData } from '../lib/posts'
 
@@ -8,15 +10,15 @@ type Props = {
 
 const IndexPage = ({ allPostsData }: Props): JSX.Element => (
   <Layout>
-    <h1>Index Page</h1>
+    <h1>ここにブログ名を書く</h1>
     <section>
-      <h2>Blog</h2>
       <ul>
-        {allPostsData.map(({ id, date, title }) => (
+        {allPostsData.map(({ id, published, title }) => (
           <li key={id}>
-            <p>{title}</p>
-            <p>{id}</p>
-            <p>{date}</p>
+            <Link href={`/posts/${id}`}>
+              <a>{title}</a>
+            </Link>
+            <p>{published}</p>
           </li>
         ))}
       </ul>

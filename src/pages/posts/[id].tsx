@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { Layout } from '../../components/Layout/Layout'
+import { Post } from '../../components/Post/Post'
 import { getAllPostIds, fetchPostData, PostContentData } from '../../lib/posts'
 
 type Props = {
@@ -8,10 +9,7 @@ type Props = {
 
 const PostPage = ({ postData }: Props): JSX.Element => (
   <Layout title={postData.title}>
-    <p>{postData.title}</p>
-    <p>{postData.id}</p>
-    <p>{postData.date}</p>
-    <div dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
+    <Post postData={postData} />
   </Layout>
 )
 

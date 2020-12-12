@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src -c .eslintrc.json --ext ts,tsx"
+    "lint": "eslint src -c .eslintrc.json --ext ts,tsx",
+    "fix": "eslint --fix src -c .eslintrc.json --ext ts,tsx"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
