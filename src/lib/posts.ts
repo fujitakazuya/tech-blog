@@ -1,8 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import remark from 'remark'
-import html from 'remark-html'
 
 export type PostData = {
   id: string
@@ -52,9 +50,7 @@ export const fetchPostData = async (id: string): Promise<PostContentData> => {
   const fileContents = fs.readFileSync(fullPath, 'utf-8')
 
   const matterResult = matter(fileContents)
-
-  const processedContent = await remark().use(html).process(matterResult.content)
-  const contentHTML = processedContent.toString()
+  const contentHTML = matterResult.content
 
   return {
     id,

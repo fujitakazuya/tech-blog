@@ -20,6 +20,11 @@
   color: var(--color-gray-text);
 }
 
+.body p {
+  font-family: 'system-ui';
+  line-height: 2rem;
+}
+
 .body h2 {
   margin: 1rem 0;
 }
@@ -30,4 +35,14 @@
 
 .body a:hover {
   text-decoration: underline;
+}
+
+.body code {
+  font-family: 'Fira Code' !important;
+}
+
+.body p code {
+  background-color: var(--color-gray-border);
+  padding: 0.2rem;
+  border-radius: 0.2rem;
 }
