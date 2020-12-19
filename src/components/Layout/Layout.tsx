@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { FC, ReactNode } from 'react'
 import styles from './Layout.module.css'
+import { Header } from '../Header/Header'
+import { BLOG_NAME } from '../../constants'
 
 type Props = {
   title?: string
@@ -10,8 +12,9 @@ type Props = {
 export const Layout: FC<Props> = ({ title, children }) => (
   <>
     <Head>
-      <title>{title ? `${title} | Fuji Blog` : 'Fuji Blog'}</title>
+      <title>{title ? `${title} | ${BLOG_NAME}` : BLOG_NAME}</title>
     </Head>
+    <Header title={BLOG_NAME} />
     <div className={styles.container}>{children}</div>
   </>
 )

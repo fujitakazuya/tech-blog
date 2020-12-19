@@ -10,7 +10,6 @@ type Props = {
 
 const IndexPage = ({ allPostsData }: Props): JSX.Element => (
   <Layout>
-    <h1>Fuji Blog</h1>
     <section>
       <ul>
         {allPostsData.map(({ id, published, title }) => (

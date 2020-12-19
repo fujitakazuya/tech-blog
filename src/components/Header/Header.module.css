@@ -1,0 +1,12 @@
+.header {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 50rem;
+  height: 66px;
+  background-color: var(--color-white);
+}
+
+.title {
+  font-size: 2rem;
+}
+
