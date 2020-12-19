@@ -14,11 +14,10 @@
 }
 
 .body p {
-  font-family: 'system-ui';
   line-height: 2rem;
 }
 
-.body h2 {
+.body h2, .body h3 {
   margin: 1rem 0;
 }
 
