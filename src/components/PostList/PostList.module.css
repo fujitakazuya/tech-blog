@@ -1,0 +1,21 @@
+.list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.item:nth-of-type(n+2) {
+  margin-top: 2rem;
+}
+
+.title {
+  color: var(--color-black);
+}
+
+.title:hover {
+  opacity: 0.8;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: var(--color-gray-text);
+}

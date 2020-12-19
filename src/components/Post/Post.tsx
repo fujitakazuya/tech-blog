@@ -22,13 +22,16 @@ type Props = {
 }
 
 export const Post: VFC<Props> = ({ postData }) => (
-  <>
+  <article>
     <div className={styles.summary}>
       <h1 className={styles.title}>{postData.title}</h1>
-      <time className={styles.time}>{postData.published}</time>
+      <span className={styles.time}>
+        公開日:
+        <time>{postData.published}</time>
+      </span>
     </div>
     <ReactMarkdown className={styles.body} renderers={{ code: CodeBlock }}>
       {postData.contentHTML}
     </ReactMarkdown>
-  </>
+  </article>
 )

@@ -10,9 +10,11 @@ type Props = {
 export const Header: VFC<Props> = ({ title }) => (
   <header className={styles.header}>
     <div>
-      <Link href="/">
-        <a className={styles.title}>{title}</a>
-      </Link>
+      <h1>
+        <Link href="/">
+          <a>{title}</a>
+        </Link>
+      </h1>
     </div>
   </header>
 )
