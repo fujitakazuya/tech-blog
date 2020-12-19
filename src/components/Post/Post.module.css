@@ -21,10 +21,6 @@
   margin: 1rem 0;
 }
 
-.body code {
-  font-family: 'Fira Code' !important;
-}
-
 .body p code {
   background-color: var(--color-gray-border);
   padding: 0.2rem;

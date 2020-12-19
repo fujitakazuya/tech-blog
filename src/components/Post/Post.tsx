@@ -1,7 +1,7 @@
 import { VFC } from 'react'
 import ReactMarkdown from 'react-markdown'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import type { PostContentData } from '../../lib/posts'
 import styles from './Post.module.css'
 
@@ -11,7 +11,11 @@ type CodeProps = {
 }
 
 const CodeBlock: VFC<CodeProps> = ({ value, language }) => (
-  <SyntaxHighlighter language={language} style={dracula}>
+  <SyntaxHighlighter
+    language={language}
+    style={a11yDark}
+    customStyle={{ borderRadius: '0.25em', fontSize: '0.9em', padding: '2em' }}
+  >
     {value}
   </SyntaxHighlighter>
 )

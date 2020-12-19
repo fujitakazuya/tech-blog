@@ -8,3 +8,7 @@ a {
   text-decoration: none;
   color: var(--color-anchor);
 }
+
+code {
+  font-family: 'Fira Code';
+}
