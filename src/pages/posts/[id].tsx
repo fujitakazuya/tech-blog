@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
 import { Layout } from '../../components/Layout/Layout'
 import { Post } from '../../components/Post/Post'
 import { getAllPostIds, fetchPostData, PostContentData } from '../../lib/posts'
@@ -8,9 +9,14 @@ type Props = {
 }
 
 const PostPage = ({ postData }: Props): JSX.Element => (
-  <Layout title={postData.title}>
-    <Post postData={postData} />
-  </Layout>
+  <>
+    <Head>
+      <meta name="description" content={postData.title} />
+    </Head>
+    <Layout title={postData.title}>
+      <Post postData={postData} />
+    </Layout>
+  </>
 )
 
 export const getStaticPaths: GetStaticPaths = async () => {
