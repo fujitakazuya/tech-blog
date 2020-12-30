@@ -6,3 +6,6 @@
   background-color: var(--color-white);
 }
 
+.header h1 {
+  font-style: italic;
+}

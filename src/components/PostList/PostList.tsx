@@ -12,9 +12,9 @@ export const PostList: VFC<Props> = ({ allPostData }) => (
   <ul className={styles.list}>
     {allPostData.map(({ id, title, published }) => (
       <li key={id} className={styles.item}>
-        <h2 className={styles.title}>
+        <h2>
           <Link href={`/posts/${id}`}>
-            <a>{title}</a>
+            <a className={styles.title}>{title}</a>
           </Link>
         </h2>
         <p className={styles.time}>
