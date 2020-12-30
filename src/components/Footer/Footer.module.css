@@ -1,0 +1,11 @@
+.footer {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-gray-border);
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 50rem;
+}
+
+.copyright {
+  text-align: center;
+}
