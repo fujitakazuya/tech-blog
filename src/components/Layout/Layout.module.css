@@ -3,5 +3,5 @@
   padding: 1.5rem 2rem;
   margin: 0 auto;
   max-width: 50rem;
-  height: 100vh;
+  min-height: 580px;
 }
