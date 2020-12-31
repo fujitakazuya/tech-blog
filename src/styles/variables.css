@@ -1,5 +1,4 @@
 :root {
-  --main-bg-color: #f9fafb;
   --color-white: #fff;
   --color-black: #000;
   --color-blue: #3B82F6;
@@ -8,7 +7,10 @@
   --color-gray-light: #e5e7eb;
   --color-gray: #6b7280;
 
+  --color-bg: #fafafa;
   --color-gray-text: var(--color-gray);
   --color-gray-border: var(--color-gray-light);
   --color-anchor: var(--color-blue);
+
+  --height-header: 66px;
 }

@@ -1,14 +1,26 @@
 body {
-  background-color: var(--main-bg-color);
   font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
     sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-anchor);
+  color: var(--color-black);
 }
 
 code {
   font-family: 'Fira Code';
 }
+
+.main {
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    border-radius: 0;
+  }
+}
+

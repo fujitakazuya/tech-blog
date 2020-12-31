@@ -6,6 +6,7 @@
 
 .title {
   margin-bottom: 1rem;
+  font-size: 24px;
 }
 
 .time {
@@ -31,6 +32,10 @@
   background-color: var(--color-gray-border);
   padding: 0.2rem;
   border-radius: 0.2rem;
+}
+
+.body a {
+  color: var(--color-anchor);
 }
 
 .body a:hover {

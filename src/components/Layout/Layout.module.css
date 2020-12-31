@@ -1,7 +1,20 @@
+.wrapper {
+  background-color: var(--color-bg);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .container {
-  background-color: var(--color-white);
-  padding: 1.5rem 2rem;
-  margin: 0 auto;
-  max-width: 50rem;
-  min-height: 580px;
+  margin: 2rem auto 0;
+  min-height: calc(100vh - 220px);
+  max-width: 70rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    justify-content: start;
+  }
 }

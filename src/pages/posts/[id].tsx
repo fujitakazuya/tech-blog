@@ -14,7 +14,11 @@ const PostPage = ({ postData }: Props): JSX.Element => (
       <meta name="description" content={postData.title} />
     </Head>
     <Layout title={postData.title}>
-      <Post postData={postData} />
+      <main role="main" className="main">
+        <section>
+          <Post postData={postData} />
+        </section>
+      </main>
     </Layout>
   </>
 )

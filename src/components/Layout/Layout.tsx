@@ -16,7 +16,9 @@ export const Layout: FC<Props> = ({ title, children }) => (
       <title>{title ? `${title} | ${BLOG_NAME}` : BLOG_NAME}</title>
     </Head>
     <Header title={BLOG_NAME} />
-    <div className={styles.container}>{children}</div>
+    <div className={styles.wrapper}>
+      <div className={styles.container}>{children}</div>
+    </div>
     <Footer />
   </>
 )

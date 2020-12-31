@@ -1,8 +1,6 @@
 .header {
-  margin: 0 auto;
-  padding: 1rem;
-  max-width: 50rem;
-  height: 66px;
+  padding: 0.5rem 1rem;
+  height: var(--height-header);
   background-color: var(--color-white);
 }
 
