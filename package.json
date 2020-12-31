@@ -7,8 +7,8 @@
     "start": "next start",
     "lint": "eslint src -c .eslintrc.json --ext ts,tsx",
     "fix": "eslint --fix src -c .eslintrc.json --ext ts,tsx",
-    "lint:css": "stylelint src/**/*.{scss,css}",
-    "fix:css": "stylelint --fix src/**/*.{scss,css}"
+    "lint:css": "stylelint src/**/*.{module.css,css}",
+    "fix:css": "stylelint --fix src/**/*.{module.css,css}"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",

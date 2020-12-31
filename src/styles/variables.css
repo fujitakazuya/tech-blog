@@ -1,16 +1,14 @@
 :root {
   --color-white: #fff;
   --color-black: #000;
-  --color-blue: #3B82F6;
-  --color-red: #EF4444;
-  --color-green: #10B981;
+  --color-blue: #3b82f6;
+  --color-red: #ef4444;
+  --color-green: #10b981;
   --color-gray-light: #e5e7eb;
   --color-gray: #6b7280;
-
   --color-bg: #fafafa;
   --color-gray-text: var(--color-gray);
   --color-gray-border: var(--color-gray-light);
   --color-anchor: var(--color-blue);
-
   --height-header: 66px;
 }
