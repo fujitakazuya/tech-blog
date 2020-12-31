@@ -6,6 +6,7 @@ import Document, {
   NextScript,
   DocumentInitialProps,
 } from 'next/document'
+import { GA_TRACKING_ID } from '../lib/gtag'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -19,6 +20,19 @@ class MyDocument extends Document {
         <Head>
           <meta name="description" content="fujiの技術ブログ。プログラミング等の備忘録など。" />
           <link rel="shortcut icon" href="/favicon.ico" />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
