@@ -8,6 +8,7 @@ export const Profile: VFC = () => (
       href="https://github.com/fujitakazuya"
       rel="nofollow noopener noreferrer"
       target="_blank"
+      aria-label="GitHubアカウントへのリンク"
       className={styles.icon}
     >
       <GitHub />
@@ -16,6 +17,7 @@ export const Profile: VFC = () => (
       href="https://twitter.com/fjkffjt"
       rel="nofollow noopener noreferrer"
       target="_blank"
+      aria-label="Twitterアカウントへのリンク"
       className={styles.icon}
     >
       <Twitter />
