@@ -21,10 +21,17 @@ code {
   background-color: var(--color-white);
   padding: 1rem;
   border-radius: 1rem;
+  width: calc(100% - var(--width-sidebar));
 }
 
 @media screen and (max-width: 500px) {
   .main {
     border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 100%;
   }
 }

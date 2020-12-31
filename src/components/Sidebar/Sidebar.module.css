@@ -1,5 +1,5 @@
 .aside {
-  width: 200px;
+  width: var(--width-sidebar);
   margin-left: 2rem;
 }
 

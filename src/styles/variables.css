@@ -11,4 +11,5 @@
   --color-gray-border: var(--color-gray-light);
   --color-anchor: var(--color-blue);
   --height-header: 66px;
+  --width-sidebar: 200px;
 }
