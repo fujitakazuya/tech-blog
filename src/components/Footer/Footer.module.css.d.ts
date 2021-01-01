@@ -1,5 +1,6 @@
 declare const styles: {
   readonly footer: string
-  readonly copyright: string
+  readonly annotation: string
+  readonly link: string
 }
 export = styles
