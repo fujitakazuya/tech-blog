@@ -3,6 +3,20 @@
   padding: 1rem 0;
 }
 
-.copyright {
+.annotation {
   text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .annotation {
+    white-space: pre-line;
+  }
+}
+
+.link {
+  color: var(--color-anchor);
+}
+
+.link:hover {
+  text-decoration: underline;
 }
