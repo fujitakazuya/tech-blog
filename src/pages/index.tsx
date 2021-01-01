@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next'
 import { Layout } from '../components/Layout/Layout'
 import { PostList } from '../components/PostList/PostList'
 import { getSortedPostsData, PostData } from '../lib/posts'
+import styles from '../styles/page.module.css'
 
 type Props = {
   allPostsData: PostData[]
@@ -9,7 +10,7 @@ type Props = {
 
 const IndexPage = ({ allPostsData }: Props): JSX.Element => (
   <Layout>
-    <main role="main" className="main">
+    <main role="main" className={styles.main}>
       <section>
         <PostList allPostData={allPostsData} />
       </section>

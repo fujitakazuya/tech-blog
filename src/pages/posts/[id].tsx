@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Layout } from '../../components/Layout/Layout'
 import { Post } from '../../components/Post/Post'
 import { getAllPostIds, fetchPostData, PostContentData } from '../../lib/posts'
+import styles from '../../styles/page.module.css'
 
 type Props = {
   postData: PostContentData
@@ -14,7 +15,7 @@ const PostPage = ({ postData }: Props): JSX.Element => (
       <meta name="description" content={postData.title} />
     </Head>
     <Layout title={postData.title}>
-      <main role="main" className="main">
+      <main role="main" className={styles.main}>
         <section>
           <Post postData={postData} />
         </section>

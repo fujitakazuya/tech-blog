@@ -16,6 +16,7 @@
 
 .body p {
   line-height: 2rem;
+  white-space: pre-line;
 }
 
 .body h2 {
