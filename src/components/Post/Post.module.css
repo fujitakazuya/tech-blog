@@ -19,6 +19,10 @@
   white-space: pre-line;
 }
 
+.body p + p {
+  margin-top: 2rem;
+}
+
 .body h2 {
   padding-bottom: 0.25rem;
   margin: 2rem 0;
