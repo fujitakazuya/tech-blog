@@ -1,7 +1,7 @@
 {
   "private": "true",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & npx tcm -w -p src/**/*.module.css",
     "build": "next build",
     "start": "next start",
     "lint": "eslint src -c .eslintrc.json --ext ts,tsx",
