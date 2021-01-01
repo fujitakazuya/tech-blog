@@ -1,1 +1,1 @@
-export const BLOG_NAME = 'fuji blog'
+export const BLOG_NAME = 'fuji techblog'
