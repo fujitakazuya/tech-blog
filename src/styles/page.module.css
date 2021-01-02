@@ -1,8 +1,8 @@
 .main {
-  background-color: var(--color-white);
-  padding: 1rem;
-  border-radius: 1rem;
   width: calc(100% - var(--width-sidebar));
+  padding: 1rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
 }
 
 @media screen and (max-width: 500px) {
