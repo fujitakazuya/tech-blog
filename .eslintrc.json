@@ -14,7 +14,7 @@
   ],
   "env": {
     "browser": true,
-    "node": "true",
+    "node": true,
     "es6": true
   },
   "rules": {
@@ -26,7 +26,6 @@
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "react/jsx-filename-extension": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   }
