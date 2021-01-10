@@ -1,6 +1,6 @@
 .summary {
-  margin-bottom: 2rem;
   padding-bottom: 1rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid var(--color-gray-border);
 }
 
@@ -29,13 +29,15 @@
   border-bottom: 1px solid var(--color-gray-border);
 }
 
-.body h3 {
+.body h3,
+.body h4 {
   margin: 1rem 0;
 }
 
 .body p code {
-  background-color: var(--color-gray-border);
   padding: 0.2rem;
+  word-break: break-all;
+  background-color: var(--color-gray-border);
   border-radius: 0.2rem;
 }
 
@@ -49,4 +51,27 @@
 
 .body pre {
   margin-top: 2rem;
+}
+
+.body table {
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.body th {
+  padding: 1rem;
+  text-align: left;
+}
+
+.body tbody tr {
+  border-top: 1px solid var(--color-gray-border);
+}
+
+.body tbody tr td {
+  padding: 1rem;
+}
+
+.body img {
+  width: 100%;
+  height: auto;
 }

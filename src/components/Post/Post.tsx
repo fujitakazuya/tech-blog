@@ -1,5 +1,6 @@
 import { VFC } from 'react'
 import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import type { PostContentData } from '../../lib/posts'
@@ -34,7 +35,7 @@ export const Post: VFC<Props> = ({ postData }) => (
         <time>{postData.published}</time>
       </span>
     </div>
-    <ReactMarkdown className={styles.body} renderers={{ code: CodeBlock }}>
+    <ReactMarkdown className={styles.body} renderers={{ code: CodeBlock }} plugins={[gfm]} skipHtml>
       {postData.contentHTML}
     </ReactMarkdown>
   </article>

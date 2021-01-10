@@ -1,6 +1,6 @@
 ---
 title: 'Go 言語で Mecab を使う (Docker)'
-published: '2021-01-10'
+published: '2021-01-11'
 ---
 
 ## 概要
@@ -11,7 +11,7 @@ MeCabとGo言語を使って形態素解析を実装してみます。
 Go言語のライブラリは下記を利用します。
 [shogo82148/go-mecab](https://github.com/shogo82148/go-mecab)
 
-## go-mecab
+## `go-mecab`
 
 ```go
 import (
@@ -72,7 +72,11 @@ return parsedWords, nil
 
 ループでnodeの値を順番に取得いきます。
 
+<!-- textlint-disable jtf-style/1.2.1.句点(。)と読点(、) -->
+<!-- textlint-disable ja-technical-writing/max-comma -->
 `node.Feature()` では「名詞,固有名詞,一般,*,*,*,8月3日,ハチガツミッカ,ハチガツミッカ」のような文字列を返します。
+<!-- textlint-enable jtf-style/1.2.1.句点(。)と読点(、) -->
+<!-- textlint-enable ja-technical-writing/max-comma -->
 今回は「名詞」「固有名詞」の情報があればよいので、カンマ区切りで先頭の2つを取得しています。
 
 ```go
@@ -81,7 +85,9 @@ if features[0] == "BOS/EOS" {
 }
 ```
 
+<!-- textlint-disable ja-technical-writing/max-comma -->
 形態素解析した際に、最初と最後が「BOS/EOS,*,*,*,*,*,*,*,*」のような出力になっていますが、こちらは不要のため除外しています。
+<!-- textlint-enable ja-technical-writing/max-comma -->
 （BOSはbeginning of sentence、EOSはend of sentenceのこと）
 
 
@@ -164,7 +170,7 @@ func parse(args map[string]string, word string) ([]ParsedWord, error) {
 
 `Mecab.New` のオプションと解析する単語は引数として渡すように変えました。
 
-## Dockerfile の作成
+## Dockerfileの作成
 
 ```dockerfile
 FROM ubuntu:18.04
@@ -190,7 +196,7 @@ RUN apt-get update \
 apt-get install -y mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file sudo wget gcc build-essential
 ```
 
-ここではmecabやgo-mecabに必要なライブラリをインストールしています。
+ここではMeCabや `go-mecab` に必要なライブラリをインストールしています。
 `wget` はGoをインストールするために必要なので一緒にインストールしておきます。
 
 ```sh
@@ -199,7 +205,7 @@ mecab-ipadic-neologd/bin/install-mecab-ipadic-neologd -n -a -y
 ```
 
 辞書をGitHubから取得しインストールします。
-`-a` オプションで全ての辞書を、 `-n` オプションで最新の辞書をインストールします。
+`-a` オプションですべての辞書を、 `-n` オプションで最新の辞書をインストールします。
 `-y` オプションをつけることで、確認をせずにインストールできます。
 
 ```sh
@@ -217,8 +223,8 @@ export CGO_CFLAGS="-I`mecab-config --inc-dir`"
 go get github.com/shogo82148/go-mecab
 ```
 
-go-mecabをインストールします。
-READMEにある通りインストール時に環境変数を設定する必要があります。
+`go-mecab` をインストールします。
+READMEに記載されている通りインストール時に環境変数を設定する必要があります。
 
 ```dockerfile
 WORKDIR /home/go-mecab
