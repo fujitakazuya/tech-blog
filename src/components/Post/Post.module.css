@@ -46,3 +46,7 @@
 .body a:hover {
   text-decoration: underline;
 }
+
+.body pre {
+  margin-top: 2rem;
+}
