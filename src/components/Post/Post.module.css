@@ -49,6 +49,10 @@
   text-decoration: underline;
 }
 
+.body pre {
+  margin-top: 2rem;
+}
+
 .body table {
   margin-top: 1rem;
   border-collapse: collapse;

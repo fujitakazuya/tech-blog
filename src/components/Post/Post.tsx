@@ -35,7 +35,7 @@ export const Post: VFC<Props> = ({ postData }) => (
         <time>{postData.published}</time>
       </span>
     </div>
-    <ReactMarkdown className={styles.body} renderers={{ code: CodeBlock }} plugins={[gfm]}>
+    <ReactMarkdown className={styles.body} renderers={{ code: CodeBlock }} plugins={[gfm]} skipHtml>
       {postData.contentHTML}
     </ReactMarkdown>
   </article>
