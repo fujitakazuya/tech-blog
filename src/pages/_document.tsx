@@ -18,7 +18,6 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <meta name="description" content="fujiの技術ブログ。プログラミング等の備忘録など。" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script

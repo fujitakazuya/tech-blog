@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import { Layout } from '../components/Layout/Layout'
 import { PostList } from '../components/PostList/PostList'
 import { getSortedPostsData, PostData } from '../lib/posts'
@@ -9,13 +10,18 @@ type Props = {
 }
 
 const IndexPage = ({ allPostsData }: Props): JSX.Element => (
-  <Layout>
-    <main role="main" className={styles.main}>
-      <section>
-        <PostList allPostData={allPostsData} />
-      </section>
-    </main>
-  </Layout>
+  <>
+    <Head>
+      <meta name="description" content="fujiの技術ブログ。プログラミング等の備忘録など。" />
+    </Head>
+    <Layout>
+      <main className={styles.main}>
+        <div>
+          <PostList allPostData={allPostsData} />
+        </div>
+      </main>
+    </Layout>
+  </>
 )
 
 export const getStaticProps: GetStaticProps = async () => {

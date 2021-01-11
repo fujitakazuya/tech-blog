@@ -15,10 +15,10 @@ const PostPage = ({ postData }: Props): JSX.Element => (
       <meta name="description" content={postData.title} />
     </Head>
     <Layout title={postData.title}>
-      <main role="main" className={styles.main}>
-        <section>
+      <main className={styles.main}>
+        <div>
           <Post postData={postData} />
-        </section>
+        </div>
       </main>
     </Layout>
   </>
