@@ -14,24 +14,24 @@ Go言語のライブラリは下記を利用します。
 ## `go-mecab`
 
 ```go
+package main
+
 import (
-    "github.com/shogo82148/go-mecab"
+	"github.com/shogo82148/go-mecab"
 )
 
-
 func parse() {
-    const ipadic = "/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd"
-    word := "8月3日に放送された「中居正広の金曜日のスマイルたちへ」(TBS系)で、1日たった5分でぽっこりおなかを解消するというダイエット方法を紹介。キンタロー。のダイエットにも密着。"
-    args := map[string]string{"dicdir":ipadic}
+	const ipadic = "/usr/lib/x86_65-linux-gnu/mecab/dic/mecab-ipadic-neologd"
+	word := "8月3日に放送された「中居正広の金曜日のスマイルたちへ」(TBS系)で、1日たった5分でぽっこりおなかを解消するというダイエット方法を紹介。キンタロー。のダイエットにも密着。"
+	args := map[string]string{"dicdir":ipadic}
+	tagger, err := mecab.New(args)
 
-    tagger, err := mecab.New(args)
+	if err != nil {
+		return nil, err
+	}
+	defer tagger.Destroy()
 
-    if err != nil {
-      panic(err)
-    }
-    defer tagger.Destroy()
-
-    node, err := tagger.ParseToNode(word)
+	node, err := tagger.ParseToNode(word)
 }
 ```
 
@@ -44,27 +44,27 @@ func parse() {
 
 ```go
 type ParsedWord struct {
-  Word             string `json:"noun"`
-  PartOfSpeech     string `json:"pos"`
-  PartOfSpeechType string `json:"post"`
+	Word             string `json:"noun"`
+	PartOfSpeech     string `json:"pos"`
+	PartOfSpeechType string `json:"post"`
 }
 
 parsedWords := []ParsedWord{}
 for ; !node.IsZero(); node = node.Next() {
-    feature := node.Feature()
-    features := strings.Split(feature, ",")
+	feature := node.Feature()
+	features := strings.Split(feature, ",")
 
-    if features[0] == "BOS/EOS" {
-        continue
-    }
+	if features[0] == "BOS/EOS" {
+		continue
+	}
 
-    parsedWord := ParsedWord{
-        Word:             node.Surface(),
-        PartOfSpeech:     features[0],
-        PartOfSpeechType: features[1],
-    }
+	parsedWord := ParsedWord{
+		Word:             node.Surface(),
+		PartOfSpeech:     features[0],
+		PartOfSpeechType: features[1],
+	}
 
-    parsedWords = append(parsedWords, parsedWord)
+	parsedWords = append(parsedWords, parsedWord)
 }
 
 return parsedWords, nil
@@ -81,7 +81,7 @@ return parsedWords, nil
 
 ```go
 if features[0] == "BOS/EOS" {
-    continue
+	continue
 }
 ```
 
