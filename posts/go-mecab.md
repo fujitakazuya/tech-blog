@@ -44,7 +44,7 @@ func parse() {
 
 ```go
 type ParsedWord struct {
-	Word             string `json:"noun"`
+	Word             string `json:"word"`
 	PartOfSpeech     string `json:"pos"`
 	PartOfSpeechType string `json:"post"`
 }
