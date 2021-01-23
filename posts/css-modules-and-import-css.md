@@ -1,5 +1,5 @@
 ---
-title: ReactでCSSModulesと通常のCSSの読み込みを併用する
+title: ReactでCSSModulesと外部ライブラリのCSSインポートを併用する
 published: '2021-01-23'
 ---
 
