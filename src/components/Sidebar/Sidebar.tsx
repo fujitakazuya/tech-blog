@@ -5,6 +5,4 @@ type Props = {
   children: ReactNode
 }
 
-export const Sidebar: FC<Props> = ({ children }) => (
-  <aside className={styles.aside}>{children}</aside>
-)
+export const Sidebar: FC<Props> = ({ children }) => <aside className={styles.aside}>{children}</aside>

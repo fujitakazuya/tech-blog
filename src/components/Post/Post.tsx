@@ -12,11 +12,7 @@ type CodeProps = {
 }
 
 const CodeBlock: VFC<CodeProps> = ({ value, language }) => (
-  <SyntaxHighlighter
-    language={language}
-    style={a11yDark}
-    customStyle={{ borderRadius: '0.25em', fontSize: '0.9em', padding: '2em' }}
-  >
+  <SyntaxHighlighter language={language} style={a11yDark} customStyle={{ borderRadius: '0.25em', fontSize: '0.9em', padding: '2em' }}>
     {value}
   </SyntaxHighlighter>
 )

@@ -1,11 +1,4 @@
-import Document, {
-  DocumentContext,
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentInitialProps,
-} from 'next/document'
+import Document, { DocumentContext, Html, Head, Main, NextScript, DocumentInitialProps } from 'next/document'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 class MyDocument extends Document {
